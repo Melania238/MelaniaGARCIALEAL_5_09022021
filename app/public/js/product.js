@@ -5,9 +5,9 @@ class Product {
    * @param {String} idProduct
    * @memberof Product
    */
-  constructor(self, idProduct) {
+  constructor(self, idProduct =null) {
     this.self = self;
-    this.getProductItem(idProduct);
+    if (idProduct!=null)this.getProductItem(idProduct);
   }
 
   /**

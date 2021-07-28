@@ -2,6 +2,10 @@ const orinocoApi = {
   apiDatas: new apiDatas('http://localhost:3000/api/cameras/')
 };
 
+const AllDatasApi = {
+  apiDatas: new apiDatas('http://localhost:3000/api/products/')
+};
+
 /**
  * Permet d'instancier les classes selon les pages
  *
@@ -17,6 +21,8 @@ function definePage() {
   switch (url) {
     case '/produit.html':
       return new Product(document.querySelector('#product-view'), params);
+      case '/produits.html':
+        return new Product(document.querySelector('#product-view'));
     case '/cart.html':
       return new CartPage(document.querySelector('tbody.cart-table-line'));
     case '/confirmation.html':
